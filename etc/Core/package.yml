@@ -1,0 +1,72 @@
+
+general:
+  name: Core Framework
+  access: public
+  price: 0
+  price_recurring: 0
+  price_interval: 
+  type: package
+
+repo:
+  branches: public
+  releases: maintainers
+  trunk: team
+
+config:
+  domain_name: 127.0.0.1
+  project: ''
+  mode: devel
+  debug_level: 2
+  cache: 0
+  date_format: F j, Y
+  max_logfile_size: 4
+  enable_javascript: 1
+  default_timezone: PST
+  default_language: en
+  default_currency: USD
+  auto_upgrade: 1
+  image_storage_type: database
+  nexmo_api_key: 
+  nexmo_api_secret: 
+  nexmo_sender:
+  recaptcha_site_key: 
+  recaptcha_secret_key:  
+  openexchange_app_id:
+  backups_enable: 0
+  backups_db_interval: H6
+  backups_full_interval: D3
+  sms_verification_message: "Your Apex verification code is ~code~"
+  site_name: My Company Name
+  site_address: 12345 Joe Street
+  site_address2: 
+  site_email: hello@domain.com
+  site_phone: "+1 (555) 123-4567"
+  site_tagline: 
+  site_about: "You may specify this block of text via the Settings-&gt;General menu of the administration panel, under the Site Info tab."
+  site_facebook: "https://facebook.com/"
+  site_twitter: "https://twitter.com/"
+  site_instagram: "https://instagram.com/"
+  site_linkedin: "https://linkedin.com/"
+  site_youtube: "https://youtube.com/"
+  site_reddit: "https://reddit.com/"
+  site_github: "https://github.com/"
+
+hashes:
+
+  server_mode:
+    devel: Devel
+    prod: Production
+  date_formats:
+    F j, Y: March 21, 2022
+    M-d-Y: Mar-21-2022
+    m/d/Y: 3/21/2022
+    d/m/Y: 21/3/2022
+    d-M-Y: 21-Mar-2022
+
+  image_storage_types:
+    filesystem: Filesystem
+    database: Database
+
+
+
+

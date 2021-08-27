@@ -1,0 +1,15 @@
+packages:
+    core:
+        type: package
+        version: 1.0.0
+        author: apex
+        local_user: ''
+        repo_alias: apex
+        installed_at: 1630094201
+repos:
+    apex:
+        host: api.apexpl.io
+        http_host: code.apexpl.io
+        svn_host: svn.apexpl.io
+        staging_host: apexpl.dev
+        name: 'Apex Public Repository'

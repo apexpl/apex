@@ -1,0 +1,15 @@
+
+##########
+# Components Registry
+#
+# This file is auto-generated, and please do not modify unless you know what you are doing.
+##########
+
+http_controllers:
+    - PublicSite
+views:
+    - index
+    - 404
+    - 500
+    - 500_generic
+

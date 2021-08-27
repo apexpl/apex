@@ -1,0 +1,29 @@
+
+##########
+# Routes
+#
+# This file has been auto-generated, but you may modify as desired below.  Please refer to the developer 
+# documentation for details on the entries within this file.
+##########
+
+routes:
+    default: PublicSite
+
+themes:
+    default: default
+
+page_vars:
+
+    title:
+        default: Apex
+
+    layouts:
+        index.html: homepage
+        default: default
+
+nocache_pages:
+
+nocache_tags:
+    - data_table
+    - callouts
+    - placeholder
