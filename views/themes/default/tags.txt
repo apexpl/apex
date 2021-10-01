@@ -420,11 +420,11 @@ active
 [[pagination]]
 @default(id=pgnMain, href=~syrus.uri~, current_page=1, total_rows=0, rows_per_page=25, max_items=10)
 
-<span id="~id~" style="vertical-align: middle; font-size: 8pt; margin-right: 7px;">
+<span id="pgnsummary_~id~" style="vertical-align: middle; font-size: 8pt; margin-right: 7px;">
     <b>~start_row~ - ~end_row~</b> of <b>~total_rows~</b>
 </span>
 
-<ul class="pagination" id ="~id~Items">
+<ul class="pagination" id="pgn_~id~">
     ~pagination.items~
 </ul>
 

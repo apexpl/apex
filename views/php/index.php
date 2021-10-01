@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace Views;
 
-use Apex\Syrus\Syrus;
+use Apex\Svc\View;
 
 /**
  * Render the template.
@@ -14,9 +14,9 @@ class index
     /**
      * Render
      */
-    public function render(Syrus $syrus)
+    public function render(View $view):void
     {
-        $syrus->assign('current_time', date('M-d Y H:i'));
+
     }
 
 }

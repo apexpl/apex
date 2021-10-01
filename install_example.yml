@@ -23,11 +23,6 @@ redis:
 
 packages:
   - webapp
-  - maintenance
-  - cms
-  - multi_admins
   - users
-  - transaction
-  - support
 
 

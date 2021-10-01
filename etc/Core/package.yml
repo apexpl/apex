@@ -14,7 +14,6 @@ repo:
 
 config:
   domain_name: 127.0.0.1
-  project: ''
   mode: devel
   debug_level: 2
   cache: 0

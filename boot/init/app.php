@@ -31,7 +31,4 @@ set_exception_handler([$error_handlers, 'handleException']);
 ini_set('pcre.backtrack_limit', '4M');
 ini_set('zlib.output_compression_level', '2');
 
-function tr($msg, ...$vars) {
-    return $msg;
-}
 

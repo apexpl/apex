@@ -1,0 +1,17 @@
+
+####################
+# Cluster routing file
+# 
+# You will generally never need this file, unless you need to 
+# implement queus or other horizontal scaling functionality.  Please 
+# refer to the documentation for details.
+####################
+
+routes:
+  rpc.default:
+    type: rpc
+    instances: all
+    routing_keys: 
+      all: App\~package.title~\Listeners\~module.title~
+
+

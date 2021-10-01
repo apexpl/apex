@@ -1,9 +1,8 @@
 
 # Apex
 
-Welcome to Apex, a simplistic yet powerful framework for the development of online operations of any scope and size.
+Welcome to Apex, a community driven PHP based framework that allows you to deploy quality and extensible operations with ease.
 
-For details, please visit the documentation site at https://apexpl.io/docs/
-
+For details, documentation and guides, please check out the main site at [https://apexpl.io/](https://apexpl.io/).
 
 

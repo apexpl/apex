@@ -9,7 +9,7 @@ use Apex\App\Cli\Cli;
  * Check the cwd and ensure we're currently inside an Apex installation 
  * directory in case we're executing from the environment path.
  */
-$cwd = check_cwd();
+$cwd = checkCwd();
 
 /**
  * Load up composer, so we have access to all of our goodies. 
@@ -35,11 +35,17 @@ exit(0);
  * Get the current cwd, checks to ensure its a correct Apex installation.  Used 
  * when the 'apex' phar archive is located within the environment path.
  */
-function check_cwd()
+function checkCwd()
 {
 
-    // Check
+    // Get directory
     $dir = getcwd();
+    if (!file_exists("$dir/boot/container.php")) {
+        $dir = __DIR__;
+    }
+
+        // Check directory
+
     if (!file_exists("$dir/boot/container.php")) { die("Not in an Apex installation directory."); }
     if (!file_exists("$dir/vendor/autoload.php")) { die("Composer packages have not yet been installed.  Please first install with:  composer update"); }
     if (!file_exists("$dir/vendor/apex/armor/src/Armor.php")) { die("Not in an Apex installation directory."); }

@@ -9,21 +9,4 @@
 routes:
     default: PublicSite
 
-themes:
-    default: default
 
-page_vars:
-
-    title:
-        default: Apex
-
-    layouts:
-        index.html: homepage
-        default: default
-
-nocache_pages:
-
-nocache_tags:
-    - data_table
-    - callouts
-    - placeholder
