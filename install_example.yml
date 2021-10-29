@@ -22,7 +22,7 @@ redis:
   dbindex: 0
 
 packages:
-  - webapp
-  - users
+  - webapp: latest
+  - users: latest
 
 

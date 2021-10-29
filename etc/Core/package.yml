@@ -1,6 +1,6 @@
 
 general:
-  name: Core Framework
+  description: Core Apex framework initialization package.
   access: public
   price: 0
   price_recurring: 0
@@ -61,7 +61,6 @@ hashes:
     m/d/Y: 3/21/2022
     d/m/Y: 21/3/2022
     d-M-Y: 21-Mar-2022
-
   image_storage_types:
     filesystem: Filesystem
     database: Database

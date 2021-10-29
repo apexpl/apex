@@ -31,7 +31,7 @@ return [
     /**
      * PSR-18 compliant HTTP client.
      */
-    HttpClientInterface::class => \GuzzleHttp\Client::class,
+    HttpClientInterface::class => function () { return new \GuzzleHttp\Client(['verify' => false]); }, 
 
     /**
      * E-mailer.  If preferred, PhpMailer and Symfony Mailer adapters are available within 
