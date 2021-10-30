@@ -17,8 +17,7 @@ services:
     volumes:
       - ./:/var/www
       - ./boot/docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-      - ./boot/docker/user/bashrc:/home/www/.bashrc
-      - ./boot/docker/user/ssh_config:/home/www/.ssh/config
+      - ./boot/docker/user:/home/www
     depends_on:
       - nginx
       - mysql
