@@ -31,6 +31,7 @@ class PublicSite implements MiddlewareInterface
         // Check authentication
         if (is_dir(SITE_PATH . '/src/Users') && $session = $this->armor->checkAuth()) { 
             $app->setSession($session);
+            $this->view->assign('profile', $session->getUser()->toDisplayArray());
         }
 
         // Render template via auto-routing based on URI being viewed
@@ -38,17 +39,8 @@ class PublicSite implements MiddlewareInterface
         $html = $this->view->render($file);
 
         // Create response
-        $response = new Response(
-            body: $html
-        );
-
-        // Add 404 status code, if needed
-        if (str_ends_with($file, '404.html')) { 
-            $response = $response->withStatus(404);
-        }
-
-        // Return
-        return $response;
+        $code = str_ends_with($file, '404.html') ? 404 : 200;
+        return new Response($code, [], $html);
     }
 
 }

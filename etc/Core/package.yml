@@ -15,8 +15,9 @@ repo:
 config:
   domain_name: 127.0.0.1
   mode: devel
-  debug_level: 2
+  debug_level: 0
   cache: 0
+  install_image: 
   date_format: F j, Y
   max_logfile_size: 4
   enable_javascript: 1
