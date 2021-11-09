@@ -15,9 +15,9 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
     volumes:
+      - userdata:/home/www/.config
       - ./:/var/www
       - ./boot/docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-      - ./boot/docker/user:/home/www
     depends_on:
       - nginx
       - mysql
@@ -36,7 +36,7 @@ services:
     volumes:
       - ./:/var/www
       - ./boot/docker/nginx:/etc/nginx/conf.d
-      - ./boot/docker/nginx:/var/log/nginx
+      - nginxlogs:/var/log/nginx
     networks:
       - apex-network
 
@@ -86,6 +86,10 @@ volumes:
   dbdata:
     driver: local
   redisdata:
+    driver: local
+  userdata:
+    driver: local
+  nginxlogs:
     driver: local
 
 

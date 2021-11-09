@@ -41,7 +41,9 @@ WORKDIR /var/www
 # Copy existing application directory contents
 COPY apex /usr/bin/
 COPY . /var/www
+COPY ./boot/docker/user /home/www
 COPY --chown=www:www . /var/www
+COPY --chown=www:www ./boot/docker/user /home/www
 
 # Change current user to www
 USER www
