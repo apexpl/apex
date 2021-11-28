@@ -7,6 +7,8 @@ CREATE TABLE internal_config (
 
 CREATE TABLE internal_tasks (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,  
+    is_onetime BOOLEAN NOT NULL DEFAULT false,
+    in_progress BOOLEAN NOT NULL DEFAULT false,
     failed SMALLINT NOT NULL DEFAULT 0,
     execute_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     last_execute_time TIMESTAMP,

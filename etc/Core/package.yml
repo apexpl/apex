@@ -65,6 +65,9 @@ hashes:
   image_storage_types:
     filesystem: Filesystem
     database: Database
+  boolean:
+    1: Yes
+    0: No
 
 
 
