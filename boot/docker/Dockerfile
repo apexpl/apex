@@ -1,5 +1,5 @@
 
-FROM php:8.0-fpm
+FROM php:8.1-fpm
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
-RUN docker-php-ext-install mysqli tokenizer gd sockets pdo pdo_mysql zip
+RUN docker-php-ext-install gd sockets pdo pdo_mysql zip
 
 # Install php-redis
 RUN pecl install -o -f redis && \ 

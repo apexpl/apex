@@ -23,6 +23,8 @@ redis:
 
 packages:
   webapp: latest
+  cms: latest
+  multi-admins: latest
   users: latest
 
 
