@@ -50,7 +50,7 @@ USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
-CMD bash -c "composer update && php-fpm"
+CMD bash -c "composer update -n --prefer-dist && php-fpm"
 #CMD ["php-fpm"]
 
 
