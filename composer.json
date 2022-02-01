@@ -15,7 +15,7 @@
         "apex/app": "^2.0",
         "monolog/monolog": "^2.3",
         "guzzlehttp/guzzle": "^7.3",
-        "symfony/cache": "^5.4"
+        "symfony/cache": "^6.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
