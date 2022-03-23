@@ -14,14 +14,15 @@ RUN apt-get update && apt-get install -y \
     git \
     subversion \
     curl \
-    default-mysql-client
-
+    default-mysql-client \
+    libpq-dev \
+    postgresql-client
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install extensions
-RUN docker-php-ext-install gd sockets pdo pdo_mysql zip
+RUN docker-php-ext-install gd sockets pdo pdo_mysql pdo_pgsql zip
 
 # Install php-redis
 RUN pecl install -o -f redis && \ 

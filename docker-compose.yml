@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
 
@@ -18,9 +18,14 @@ services:
       - userdata:/home/www/.config
       - ./:/var/www
       - ./boot/docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    links:
+      - postgresql
+      - mysql
+      - redis
     depends_on:
       - nginx
       - mysql
+      - postgresql
       - redis
     networks:
       - apex-network
@@ -61,6 +66,27 @@ services:
     networks:
       - apex-network
 
+  postgresql:
+    image: postgres:14.1-alpine
+    container_name: postgresql
+    #restart: unless-stopped
+    restart: always
+    tty: true
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: apex
+      POSTGRES_USER: apex
+      POSTGRES_PASSWORD: password
+      SERVICE_TAGS: dev
+      SERVICE_NAME: postgresql
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./boot/docker/postgresql/postgresql.conf:/etc/postgresql/14/main/postgresql.conf'
+      - ./boot/docker/postgresql/pg_hba.conf:/etc/postgresql/14/main/pg_hba.conf'
+    networks:
+      - apex-network
+
   redis:
     image: redis:5.0
     container_name: redis
@@ -84,6 +110,8 @@ networks:
 #Volumes
 volumes:
   dbdata:
+    driver: local
+  pgdata:
     driver: local
   redisdata:
     driver: local
