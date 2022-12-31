@@ -1,11 +1,11 @@
 packages:
     core:
         type: package
-        version: 1.0.0
+        version: 1.0.1
         author: apex
         local_user: ''
         repo_alias: apex
-        installed_at: 1638141045
+        installed_at: 1672441856
 repos:
     apex:
         host: api.apexpl.io

@@ -50,6 +50,7 @@ config:
   site_youtube: "https://youtube.com/"
   site_reddit: "https://reddit.com/"
   site_github: "https://github.com/"
+  openai_apikey: 
 
 hashes:
 

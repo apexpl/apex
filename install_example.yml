@@ -9,7 +9,7 @@
 # running "./apex" within terminal.
 #
 
-domain_name: 127.0.0.1
+domain_name: localhost
 
 db:
   dbname: apex

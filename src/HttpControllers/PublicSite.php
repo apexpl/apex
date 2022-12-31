@@ -8,7 +8,6 @@ use Apex\Armor\Armor;
 use Nyholm\Psr7\Response;
 use Psr\Http\Message\{ServerRequestInterface, ResponseInterface};
 use Psr\Http\Server\{MiddlewareInterface, RequestHandlerInterface};
-use Symfony\Component\Process\Process;
 
 /**
  * Default http controller, generally intended to serve public web site.
@@ -35,7 +34,11 @@ class PublicSite implements MiddlewareInterface
         }
 
         // Render template via auto-routing based on URI being viewed
-        $file = $this->view->doAutoRouting($app->getPath());
+        if (preg_match("/^admin\//", trim($app->getPath(), '/'))) {
+            $file = '404.html';
+        } else {
+            $file = $this->view->doAutoRouting($app->getPath());
+        }
         $html = $this->view->render($file);
 
         // Create response
