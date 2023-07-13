@@ -106,6 +106,12 @@ return [
     ],
 
     /**
+     * If using reCaptcha, the site and secret keys.
+     */
+    'syrus.recaptcha_site_key' => '',
+    'syrus.recaptcha_secret_key' => '',
+
+    /**
      * Dependency injection container, and should generally never be changed.  Must be a closure, and implement the 
      * ApexContainerInterface.  Please see documentation for details.
      */
