@@ -26,5 +26,6 @@ packages:
   cms: latest
   multi-admins: latest
   users: latest
+  transaction: latest
 
 
