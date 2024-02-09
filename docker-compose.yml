@@ -55,8 +55,8 @@ services:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: apex
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: apex
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: root
       MYSQL_PASSWORD: password
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
