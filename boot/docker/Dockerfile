@@ -20,8 +20,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     libgmp-dev \
     gnupg2 \
-    libgpgme11-dev \
-    ansible
+    libgpgme11-dev
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
